@@ -1,0 +1,9 @@
+# Use module itertools
+import itertools
+#the list
+num = [10, 1, 20, 11]
+result = []
+for permutation in itertools.permutations(str(num) for num in num):
+   result.append(''.join(permutation))
+num_max = max(result, key=int)
+print(int(num_max))
